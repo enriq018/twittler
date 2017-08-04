@@ -49,7 +49,7 @@ var generateRandomTweet = function(){
 for(var i = 0; i < 10; i++){
   generateRandomTweet();
 }
-
+var t = 'hello hello';
 var scheduleNextTweet = function(){
   generateRandomTweet();
   setTimeout(scheduleNextTweet, Math.random() * 1500);
@@ -65,5 +65,6 @@ var writeTweet = function(message){
   var tweet = {};
   tweet.user = visitor;
   tweet.message = message;
+  tweet.test = t
   addTweet(tweet);
 };

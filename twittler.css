@@ -1,0 +1,36 @@
+body {
+  background-color: grey;
+}
+
+#home_cointainer {
+  background: blue;
+  padding:10px;
+}
+
+#title_cointainer {
+background:green;
+height:100px;
+margin:20px;
+}
+
+#feed_cointainer {
+background:yellow;
+height:500px;margin:20px;
+overflow: hidden;
+
+
+}
+
+#user_cointainer {
+background:red;
+height:100px;margin:20px;
+overflow: scroll;
+}
+
+button {
+    color:#050;
+    font: old 84% 'trebuchet ms',helvetica,sans-serif;
+    background-color:#fed;
+    border:15px solid;
+    border-color: #696 #363 #363 #696;
+}

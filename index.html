@@ -1,15 +1,111 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link style= "text.css" rel= "stylesheet" href = "twittler.css"/>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
   </head>
   <body>
+    <div id ='home_cointainer'>
+      <div id ='title_cointainer'><p>Title</p></div>
+      <button class="feed">Update Feed</button>
+
+
+      <div id ='feed_cointainer'><p>FEED</p></div>
+
+      <button class="sharksforcheap">@sharksforcheap</button>
+      <button class="mracus">@mracus</button>
+      <button class="shawndrost">@shawndrost</button>
+      <button class="douglascalhoun">@douglascalhoun</button>
+
+
+      <div id ='user_cointainer'><p>User</p></div>
+
+    </div>
+
+    <script>
+      $(document).ready(function(){
+        $('.feed').on('click', function(){
+
+     var timeStamp = Math.floor(Date.now());
+     var currentTime = new Date(timeStamp);
+
+     var $feed = $('#feed_cointainer');
+     $feed.html('twittler');
+     var count = 0;
+     var lastTweets =[];
+
+     var index = streams.home.length - 1;
+     while(index >= 0){
+       var tweet = streams.home[index];
+       //<p>My mother has <span tweet.user</span> eyes.</p>
+
+       var $tweet = $('<p></p>');
+       $tweet.text('@' + tweet.user + ': ' + tweet.message  + '        [' + currentTime+']');
+       //var string = $tweet
+       //$tweet = @shawndrost: productively interfaced that belief system
+
+
+       var $span = $('<span></span>')
+       //$('<button>Click Me!</button>').appendTo($span);
+       $($tweet).appendTo($span);
+
+       lastTweets.push($span);
+
+        // var x = <button class="mracus">@mracus</button>
+
+      lastTweets[count].appendTo($feed);
+
+      //
+      // var $b = $('<button class = tweet.user> tweet.user</button>');
+      // $b.appendTo($feed);
+
+
+       index -= 1;
+       count++
+
+
+     }
+     });
+      $('.sharksforcheap').on('click', function(){
+         var $feed = $('#user_cointainer');
+         $( "#feed_cointainer :contains('@sharksforcheap:')" ).clone().appendTo('#user_cointainer');
+
+      })
+
+      $('.mracus').on('click', function(){
+         var $feed = $('#user_cointainer');
+         $( "#feed_cointainer :contains('@mracus:')" ).clone().appendTo('#user_cointainer');
+
+      })
+
+      $('.shawndrost').on('click', function(){
+         var $feed = $('#user_cointainer');
+         $( "#feed_cointainer :contains('@shawndrost:')" ).clone().appendTo('#user_cointainer');
+
+      })
+
+      $('.douglascalhoun').on('click', function(){
+         var $feed = $('#user_cointainer');
+         $( "#feed_cointainer :contains('@douglascalhoun:')" ).clone().appendTo('#user_cointainer');
+
+      })
+
+
+
+   });
+      </script>
+
+<!--
     <script>
 
+
       $(document).ready(function(){
+
+
+
         var $body = $('body');
-        $body.html('');
+        $body.html('twittler');
 
         var index = streams.home.length - 1;
         while(index >= 0){
@@ -20,8 +116,10 @@
           index -= 1;
         }
 
+
       });
 
     </script>
+    -->
   </body>
 </html>

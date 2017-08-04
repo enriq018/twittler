@@ -13,10 +13,10 @@
 
       <div id ='feed_cointainer'><p>FEED</p></div>
 
-      <button class="sharksforcheap">@sharksforcheap</button>
+      <!-- <button class="sharksforcheap">@sharksforcheap</button>
       <button class="mracus">@mracus</button>
       <button class="shawndrost">@shawndrost</button>
-      <button class="douglascalhoun">@douglascalhoun</button>
+      <button class="douglascalhoun">@douglascalhoun</button> -->
 
 
       <div id ='user_cointainer'><p>User</p></div>
@@ -46,8 +46,8 @@
        //$tweet = @shawndrost: productively interfaced that belief system
 
 
-       var $span = $('<span></span>')
-       //$('<button>Click Me!</button>').appendTo($span);
+       var $span = $('<span></span>').addClass("please")
+       $('<button>' + tweet.user+ '</button>').appendTo($span).addClass(tweet.user);
        $($tweet).appendTo($span);
 
        lastTweets.push($span);
@@ -64,32 +64,38 @@
        index -= 1;
        count++
 
+             $('.sharksforcheap').on('click', function(){
+                var $feed = $('#user_cointainer');
+                $( "#feed_cointainer :contains('@sharksforcheap:')" ).clone().appendTo('#user_cointainer');
+
+             })
+
+             $('.mracus').on('click', function(){
+                var $feed = $('#user_cointainer');
+                $( "#feed_cointainer :contains('@mracus:')" ).clone().appendTo('#user_cointainer');
+
+             })
+
+             $('.shawndrost').on('click', function(){
+                var $feed = $('#user_cointainer');
+                $( "#feed_cointainer :contains('@shawndrost:')" ).clone().appendTo('#user_cointainer');
+
+             })
+
+             $('.douglascalhoun').on('click', function(){
+                var $feed = $('#user_cointainer');
+                $( "#feed_cointainer :contains('@douglascalhoun:')" ).clone().appendTo('#user_cointainer');
+
+             })
+
 
      }
      });
-      $('.sharksforcheap').on('click', function(){
-         var $feed = $('#user_cointainer');
-         $( "#feed_cointainer :contains('@sharksforcheap:')" ).clone().appendTo('#user_cointainer');
 
-      })
 
-      $('.mracus').on('click', function(){
-         var $feed = $('#user_cointainer');
-         $( "#feed_cointainer :contains('@mracus:')" ).clone().appendTo('#user_cointainer');
 
-      })
 
-      $('.shawndrost').on('click', function(){
-         var $feed = $('#user_cointainer');
-         $( "#feed_cointainer :contains('@shawndrost:')" ).clone().appendTo('#user_cointainer');
 
-      })
-
-      $('.douglascalhoun').on('click', function(){
-         var $feed = $('#user_cointainer');
-         $( "#feed_cointainer :contains('@douglascalhoun:')" ).clone().appendTo('#user_cointainer');
-
-      })
 
 
 

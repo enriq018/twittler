@@ -1,36 +1,41 @@
-body {
-  background-color: grey;
+.row.match-my-cols {
+    overflow: hidden;
+    background-color: #0ffcf4;
+    height: 60px;
 }
 
-#home_cointainer {
-  background: blue;
-  padding:10px;
+.row.match-my-cols [class*="col-"]{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
 }
 
-#title_cointainer {
-background:green;
-height:100px;
-margin:20px;
-}
-
-#feed_cointainer {
-background:yellow;
-height:500px;margin:20px;
-overflow: hidden;
+.row.match-my-cols2 {
+    overflow: hidden;
+    background-color: #54fff9;
+    height: 380px;
+    overflow: auto;
+    color:#000000;
+    font-weight: 600;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 
 
 }
 
-#user_cointainer {
-background:red;
-height:100px;margin:20px;
-overflow: scroll;
+.row.match-my-cols3 {
+    overflow: hidden;
+    background-color: #1500b7;
+    height: 170px;
+    overflow: scroll;
+    color: white;
+    font-weight: 600;
+    font-style: italic;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+
 }
 
-button {
-    color:#050;
-    font: old 84% 'trebuchet ms',helvetica,sans-serif;
-    background-color:#fed;
-    border:15px solid;
-    border-color: #696 #363 #363 #696;
+h1{
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bolder;
 }
